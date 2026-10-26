@@ -16,12 +16,37 @@
     h1 {
         color: darkblue;
     }
+     
+* {
+    box-sizing: border-box;
+}
+
+
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+
+#hero {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
 
         </style>
   </head>
   <body>
 
-    <h1>Student Registration</h1>
+    <h1 id="hero">Student Registration</h1>
      <nav>
         <a href="index.html">Home</a> |
         <a href="about.html">About</a> |
@@ -29,7 +54,7 @@
         <a href="contact.html">Contact</a>
         </nav>
        <br> <br>
-    <form action="#" method="post">
+    <form action="#" method="post" class="card">
       <label for="name">Full Name:</label>
       <input type="text" id="name" name="name" required />
 
