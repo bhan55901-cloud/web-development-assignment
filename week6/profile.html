@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 6 - Box Model</title>
+    <title>Week 6 - Profile Cards</title>
 
     <style>
-        /* Task 6.1: Box sizing */
+        /* Task 6.1: Box Model */
         * {
             box-sizing: border-box;
         }
@@ -19,30 +19,134 @@
             padding: 30px;
         }
 
-        .box-demo {
-            width: 320px;
-            padding: 25px;
-            border: 5px solid #2563eb;
-            margin: 30px auto;
-            background-color: #dbeafe;
-        }
-
         h1 {
             text-align: center;
-            color: #1e3a8a;
+            color: #1e293b;
+        }
+
+        /* Task 6.2: Cards layout */
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        /* Common profile card */
+        .profile-card {
+            width: 280px;
+            padding: 25px;
+            border: 2px solid #cbd5e1;
+            border-radius: 18px;
+            text-align: center;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Circular avatar */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            outline: 2px solid #2563eb;
+            object-fit: cover;
+        }
+
+        .profile-card h2 {
+            margin: 15px 0 8px;
+        }
+
+        .profile-card p {
+            line-height: 1.6;
+            color: #475569;
+        }
+
+        /* Colour version 1: Blue */
+        .blue-card {
+            border-color: #2563eb;
+        }
+
+        .blue-card h2 {
+            color: #1d4ed8;
+        }
+
+        .blue-card .avatar {
+            outline-color: #2563eb;
+        }
+
+        /* Colour version 2: Green */
+        .green-card {
+            background-color: #f0fdf4;
+            border-color: #16a34a;
+        }
+
+        .green-card h2 {
+            color: #15803d;
+        }
+
+        .green-card .avatar {
+            outline-color: #16a34a;
+        }
+
+        /* Colour version 3: Purple */
+        .purple-card {
+            background-color: #faf5ff;
+            border-color: #9333ea;
+        }
+
+        .purple-card h2 {
+            color: #7e22ce;
+        }
+
+        .purple-card .avatar {
+            outline-color: #9333ea;
         }
     </style>
 </head>
 
 <body>
-    <h1>CSS Box Model</h1>
 
-    <div class="box-demo">
-        <h2>My Profile Card</h2>
-        <p>This is the content area.</p>
-        <p>Padding creates space inside the border.</p>
-        <p>The border surrounds the content and padding.</p>
-        <p>Margin creates space outside the border.</p>
+    <h1>My Profile Cards</h1>
+
+    <div class="cards-container">
+
+        <div class="profile-card blue-card">
+            <img
+                class="avatar"
+                src="https://placehold.co/120x120/DBEAFE/1E40AF?text=BS"
+                alt="Blue profile avatar"
+            >
+            <h2>Bhan Singh</h2>
+            <p>B.Tech CSE Student</p>
+            <p>Interested in web development and programming.</p>
+        </div>
+
+        <div class="profile-card green-card">
+            <img
+                class="avatar"
+                src="https://placehold.co/120x120/D1FAE5/065F46?text=BS"
+                alt="Green profile avatar"
+            >
+            <h2>Bhan Singh</h2>
+            <p>B.Tech CSE Student</p>
+            <p>Learning HTML, CSS and JavaScript.</p>
+        </div>
+
+        <div class="profile-card purple-card">
+            <img
+                class="avatar"
+                src="https://placehold.co/120x120/EDE9FE/5B21B6?text=BS"
+                alt="Purple profile avatar"
+            >
+            <h2>Bhan Singh</h2>
+            <p>B.Tech CSE Student</p>
+            <p>Building projects and improving coding skills.</p>
+        </div>
+
     </div>
+
 </body>
 </html>
