@@ -80,6 +80,27 @@
     border: none;
     border-radius: 5px;
 }
+    /* Task 7.3: Flexbox Cards */
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    flex: 1 1 200px;
+    background-color: #f1f5f9;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #2563eb;
+}
     </style>
 </head>
 
@@ -112,6 +133,26 @@
     <p>Learn Web Development with Flexbox</p>
 
     <button>Explore More</button>
+
+</section>
+<!-- Task 7.3: Responsive Cards -->
+
+<section class="cards-container">
+
+    <div class="card">
+        <h2>HTML</h2>
+        <p>Learn the structure of web pages using HTML.</p>
+    </div>
+
+    <div class="card">
+        <h2>CSS</h2>
+        <p>Design beautiful websites using CSS.</p>
+    </div>
+
+    <div class="card">
+        <h2>JavaScript</h2>
+        <p>Make websites interactive using JavaScript.</p>
+    </div>
 
 </section>
 </body>
